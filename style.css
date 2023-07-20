@@ -1,0 +1,176 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+
+
+:root{
+    --purple: hsl(259, 100%, 65%);
+    --lightRed: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --offWhite: hsl(0, 0%, 94%);
+    --lightGrey: hsl(0, 0%, 86%);
+    --smokeyGrey: hsl(0, 1%, 44%);
+    --offBlack: hsl(0, 0%, 8%);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--offWhite);
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 97vh;
+}
+
+
+.container{
+    width: 40em;
+    background-color: var(--white);
+    border-radius: 20px 20px 150px 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.date-text{
+    font-size: 11px;
+    letter-spacing: 3.5px;
+    color: var(--smokeyGrey);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.error-state{
+    margin-top: 4px;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--lightRed);
+}
+
+.error-input-date{
+    color: var(--lightRed);
+}
+
+.error-input{
+    border: 1px solid var(--lightRed);
+}
+
+
+
+input{
+    width: 120px;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--lightGrey);
+    color: var(--offBlack);
+}
+
+input:focus{
+    outline: 1px solid var(--purple);
+}
+
+.seperation{
+    position: relative;
+}
+
+.seperate-line{
+    border: 1px solid var(--lightGrey);
+}
+
+#submit-button{
+    background-color: var(--purple);
+    padding: 17px;
+    border-radius: 100px;
+    width: 70px;
+    position: absolute;
+    right: 0;
+    top: -35px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+#submit-button:hover{
+    background-color: var(--offBlack);
+}
+
+.input-date-wrapper{
+    display: flex;
+    gap: 25px;
+}
+
+.date-result{
+    font-size: 60px;
+    font-weight: 800;
+    font-style: italic;
+    line-height : 1.2em;
+    color: var(--offBlack);
+
+
+}
+
+.result{
+    color: var(--purple);
+    margin-right: 7px;
+    overflow-y: hidden;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+@media screen and (max-width: 556px){
+
+
+    .container{
+        /* width: 23em; */
+        padding: 50px 30px;
+        margin: 0 20px;
+        gap: 60px;
+    }
+
+    /* .input-date-wrapper{
+        flex-wrap: wrap;
+    } */
+    
+    input{
+        width: 80px;
+    }
+
+
+    .date-result{
+        font-size: 50px;
+    }
+
+    #submit-button{
+        left: 7.3em;
+        top: -1.85em;
+        width: 60px;
+        padding: 15px;
+    }
+    
+}
